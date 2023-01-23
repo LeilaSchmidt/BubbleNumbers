@@ -31,7 +31,6 @@
                     {
                         var biggerNumber = numList[j];
                         numList[j] = numList[j + 1];
-                        //var justChecking = numList[j];
                         numList[j + 1] = biggerNumber;
                     }
                     Console.WriteLine(String.Join(", ", numList));
