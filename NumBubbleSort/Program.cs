@@ -4,19 +4,25 @@
     {
         static void Main(string[] args)
         {
-            var numbers = new List<int>();
-            bool noMoreNums = false;
-            while (noMoreNums == false)
+            var numberList = new List<int>();
+            while (true)
             {
                 Console.WriteLine("Enter a number or 'stop' to end: ");
-                var input = Console.ReadLine();
-                if (noMoreNums = true)
+                var userInput = Console.ReadLine();
+                if (userInput == "stop" || userInput == "Stop" || userInput == "STOP")
                 {
                     break;
                 }
-                numbers.Add(int.Parse(input));
+                if (!int.TryParse(userInput, out int numUserInput))
+                {
+                    Console.WriteLine("This is not a number");
+                    continue;
+                }
+                numberList.Add(numUserInput);
             }
-
+            Console.WriteLine("The numbers you entered were... ");
+            Console.WriteLine(String.Join(", ", numberList));
         }
+        
     }
 }
