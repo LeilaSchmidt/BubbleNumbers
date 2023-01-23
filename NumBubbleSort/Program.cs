@@ -33,11 +33,10 @@
                         numList[j] = numList[j + 1];
                         numList[j + 1] = biggerNumber;
                     }
-                    Console.WriteLine(String.Join(", ", numList));
                 }
-                Console.WriteLine(String.Join(", ", numList));
             }
-
+            Console.WriteLine("The numbers you entered in ascending order are... ");
+            Console.WriteLine(String.Join(", ", numList));
         }
     }
 }
