@@ -21,7 +21,7 @@
                 numList.Add(numUserInput);
             }
             Console.WriteLine("The numbers you entered were... ");
-            Console.WriteLine(String.Join(", ", numList));
+            Console.WriteLine(string.Join(", ", numList));
 
             int i = 0;
             while (i < numList.Count - 1)
@@ -40,7 +40,7 @@
                 i++;
             }
             Console.WriteLine("The numbers you entered in ascending order are");
-            Console.WriteLine(String.Join(", ", numList));
+            Console.WriteLine(string.Join(", ", numList));
 
         }
     }
